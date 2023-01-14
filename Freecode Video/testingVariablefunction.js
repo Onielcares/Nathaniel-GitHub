@@ -16,3 +16,9 @@ console.log(concatenatestring);
 var ourName = "Onielcares";
 var Ourstr = "He is called "+ ourName +" the Great Dude";
 console.log(Ourstr);
+// Appending Variable to String
+var mystr = " Needed and Needful";
+var Ourstr = "Learning to code is";
+Ourstr += mystr;
+console.log(Ourstr);
+// Finding length of String
