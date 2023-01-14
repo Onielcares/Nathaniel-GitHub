@@ -22,3 +22,7 @@ var Ourstr = "Learning to code is";
 Ourstr += mystr;
 console.log(Ourstr);
 // Finding length of String
+var mynamelength = "0";
+var myname = "Onielcares";
+mynamelength = myname.length;
+console.log(mynamelength);
