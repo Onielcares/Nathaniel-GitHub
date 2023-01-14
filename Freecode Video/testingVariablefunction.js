@@ -12,3 +12,7 @@ console.log(concatenatestring);
 var concatenatestring2 = "I come first "; 
 concatenatestring2 += "I aint Second"
 console.log(concatenatestring);
+// Concatenating Strings with Variable
+var ourName = "Onielcares";
+var Ourstr = "He is called "+ ourName +" the Great Dude";
+console.log(Ourstr);
