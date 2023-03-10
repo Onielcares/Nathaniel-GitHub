@@ -26,3 +26,4 @@ var mynamelength = "0";
 var myname = "Onielcares";
 mynamelength = myname.length;
 console.log(mynamelength);
+// Continuation 02-12-2023
