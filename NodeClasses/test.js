@@ -7,4 +7,5 @@ const greet = (name) => {
 }
 
 greet(`Nathaniel`);
+greet(`Chinwendum`)
 greet(`Oladunni`);
