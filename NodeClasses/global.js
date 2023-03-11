@@ -1,7 +1,7 @@
 // Global Object
 
-console.log(global);
+//console.log(global);
 
-global.setTimeout(() => {
+setTimeout(() => {
     console.log(`God is the Greatest`)
 }, 3000);
