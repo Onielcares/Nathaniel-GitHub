@@ -1,4 +1,4 @@
-// Global Object
+/* // Global Object
 
 //console.log(global);
 
@@ -14,4 +14,10 @@ const int = setInterval(() => {
 // Directory Name and File Name
 
 console.log(__dirname)
-console.log(__filename)
+console.log(__filename) */
+
+/* // document object no in th Node Js unlike Javascript
+console.log(document.queryselector); */
+
+// Modules and Require
+
