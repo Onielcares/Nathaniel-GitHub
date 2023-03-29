@@ -1,14 +1,4 @@
-// const name = "Oniel"
-
-// console.log(name)
-
-const greet = (name) => {
-    console.log(`Good morning, ${name}`);
-}
-
-greet(`Nathaniel`);
-greet(`Chinwendum`)
-greet(`Oladunni`);
-
-// Global Object
-// in node our Global object is Global unlike js which is window
+var number1 = 5;
+var number2 = 10;
+var result = number1 + number2;
+console.log(result);
