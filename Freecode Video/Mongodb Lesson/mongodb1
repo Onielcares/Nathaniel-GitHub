@@ -1,0 +1,226 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+PS C:\Users\Lenovo> ls
+
+
+    Directory: C:\Users\Lenovo
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----          3/1/2023   5:57 PM                .ssh
+d-----        12/15/2022  12:39 AM                .vscode
+d-----         1/14/2023  10:42 PM                .vscode-cli
+d-r---         12/7/2019   8:03 AM                3D Objects
+d-r---         12/7/2019   8:03 AM                Contacts
+d-r---          3/2/2023   2:27 PM                Desktop
+d-r---          3/1/2023  11:41 PM                Documents
+d-r---          3/3/2023   1:48 PM                Downloads
+
+test> ls
+ReferenceError: ls is not defined (Are you trying to run a script written for the legacy shell? Try running `snippet install mongocompat`)
+test> show dbs
+admin      40.00 KiB
+bookstore  72.00 KiB
+config     72.00 KiB
+local      40.00 KiB
+test> use bookstore
+switched to db bookstore
+bookstore> show collections
+books
+bookstore> db.books.insertOne({title: "The Midas Touch", author: "Kenneth Hagin", pages: 600, rating: 10, genre: ["Gospel", "Faith"]})
+{
+  acknowledged: true,
+  insertedId: ObjectId("6402be06f96da36e10649a1e")
+}
+bookstore> db.books.insertMany
+bookstore>
+(To exit, press Ctrl+C again or Ctrl+D or type .exit)
+bookstore> ls
+ReferenceError: ls is not defined (Are you trying to run a script written for the legacy shell? Try running `snippet install mongocompat`)
+bookstore> help
+
+  Shell Help:
+
+    use                                        Set current database
+    show                                       'show databases'/'show dbs': Print a list of all available databases.
+                                               'show collections'/'show tables': Print a list of all collections for current database.
+                                               'show profile': Prints system.profile information.
+                                               'show users': Print a list of all users for current database.
+                                               'show roles': Print a list of all roles for current database.
+                                               'show log <type>': log for current connection, if type is not set uses 'global'
+                                               'show logs': Print all logs.
+
+    exit                                       Quit the MongoDB shell with exit/exit()/.exit
+    quit                                       Quit the MongoDB shell with quit/quit()
+    Mongo                                      Create a new connection and return the Mongo object. Usage: new Mongo(URI, options [optional])
+    connect                                    Create a new connection and return the Database object. Usage: connect(URI, username [optional], password [optional])
+    it                                         result of the last line evaluated; use to further iterate
+    version                                    Shell version
+    load                                       Loads and runs a JavaScript file into the current shell environment
+    enableTelemetry                            Enables collection of anonymous usage data to improve the mongosh CLI
+    disableTelemetry                           Disables collection of anonymous usage data to improve the mongosh CLI
+    passwordPrompt                             Prompts the user for a password
+    sleep                                      Sleep for the specified number of milliseconds
+    print                                      Prints the contents of an object to the output
+    printjson                                  Alias for print()
+    convertShardKeyToHashed                    Returns the hashed value for the input using the same hashing function as a hashed index.
+    cls                                        Clears the screen like console.clear()
+    isInteractive                              Returns whether the shell will enter or has entered interactive mode
+
+  For more information on usage: https://docs.mongodb.com/manual/reference/method
+bookstore> db.books.insertOne({title: "The Midas Touch", author: "Kenneth Hagin", pages: 600, rating: 10, genre: ["Gospel", "Faith"]},title: "The Midas Touch", author: "Kenneth Hagin", pages: 600, rating: 10, genre: ["Gospel", "Faith"]}title: "The Midas Touch", author: "Kenneth Hagin", pages: 600, rating: 10, genre: ["Gospel", "Faith"]}title: "The Midas Touch", author: "Kenneth Hagin", pages: 600, rating: 10, genre: ["Gospel", "Faith"]})
+bookstore> db.books.insertMan([{title: "Understandeth what thou readest", author: "Chris Onayinka", pages: 1102, rating: 10, genre: ["Gospel", "Faith"]}, {title: "The Hyper-Grace Gospel", author: "Chris Onayinka", pages: 250, rating: 10, genre: ["Gospel", "Faith"]}])
+TypeError: db.books.insertMan is not a function
+bookstore> db.books.insertMany([{title: "Understandeth what thou readest", author: "Chris Onayinka", pages: 1102, rating: 10, genre: ["Gospel", "Faith"]}, {title: "The Hyper-Grace Gospel", author: "Chris Onayinka", pages: 250, rating: 10, genre: ["Gospel", "Faith"]}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("6402c606f96da36e10649a1f"),
+    '1': ObjectId("6402c606f96da36e10649a20")
+  }
+}
+bookstore> db.books.find()
+[
+  {
+    _id: ObjectId("6402a38335d00102946178bc"),
+    title: 'Evil Proceeds',
+    author: 'Tester Dregor',
+    pages: 300,
+    genre: [ 'Horror', 'magical' ],
+    rating: 9
+  },
+  {
+    _id: ObjectId("6402abb035d00102946178bf"),
+    title: 'Name of the Wind',
+    author: 'Nathaniel Olatomide',
+
+bookstore> db.books.find({rating: 10})
+[
+  {
+    _id: ObjectId("6402be06f96da36e10649a1e"),
+    title: 'The Midas Touch',
+    author: 'Kenneth Hagin',
+    pages: 600,
+    rating: 10,
+    genre: [ 'Gospel', 'Faith' ]
+  },
+  {
+    _id: ObjectId("6402c606f96da36e10649a1f"),
+    title: 'Understandeth what thou readest',
+    author: 'Chris Onayinka',
+    pages: 1102,
+    rating: 10,
+    genre: [ 'Gospel', 'Faith' ]
+  },
+  {
+    _id: ObjectId("6402c606f96da36e10649a20"),
+    title: 'The Hyper-Grace Gospel',
+    author: 'Chris Onayinka',
+    pages: 250,
+    rating: 10,
+    genre: [ 'Gospel', 'Faith' ]
+  }
+]
+bookstore> db.books.find({rating: 1, author: 1, genre: 1})
+
+bookstore>
+
+bookstore> db.books.find({rating: 1, author: 1, genre: 1})
+
+bookstore> db.books.find({rating: 10}, {author: 1, genre: 1})
+[
+  {
+    _id: ObjectId("6402be06f96da36e10649a1e"),
+    author: 'Kenneth Hagin',
+    genre: [ 'Gospel', 'Faith' ]
+  },
+  {
+    _id: ObjectId("6402c606f96da36e10649a1f"),
+    author: 'Chris Onayinka',
+    genre: [ 'Gospel', 'Faith' ]
+  },
+  {
+    _id: ObjectId("6402c606f96da36e10649a20"),
+    author: 'Chris Onayinka',
+    genre: [ 'Gospel', 'Faith' ]
+  }
+]
+bookstore> db.books.find({rating: 10}, {author: 1, genre: 1, title: 1})
+[
+  {
+    _id: ObjectId("6402be06f96da36e10649a1e"),
+    title: 'The Midas Touch',
+    author: 'Kenneth Hagin',
+    genre: [ 'Gospel', 'Faith' ]
+  },
+  {
+    _id: ObjectId("6402c606f96da36e10649a1f"),
+    title: 'Understandeth what thou readest',
+    author: 'Chris Onayinka',
+    genre: [ 'Gospel', 'Faith' ]
+  },
+  {
+    _id: ObjectId("6402c606f96da36e10649a20"),
+    title: 'The Hyper-Grace Gospel',
+    author: 'Chris Onayinka',
+    genre: [ 'Gospel', 'Faith' ]
+  }
+]
+bookstore> db.books.find({}, {rating: 1, author: 1, genre: 1})
+[
+  {
+    _id: ObjectId("6402a38335d00102946178bc"),
+    author: 'Tester Dregor',
+    genre: [ 'Horror', 'magical' ],
+    rating: 9
+  },
+  {
+    _id: ObjectId("6402abb035d00102946178bf"),
+    author: 'Nathaniel Olatomide',
+    genre: [ 'Fantasy', 'magical' ],
+    rating: 9
+  },
+  {
+    _id: ObjectId("6402abb035d00102946178c0"),
+    author: 'Olatomide Nathaniel',
+    genre: [ 'Fantasy', 'magical' ],
+    rating: 7
+  },
+  {
+    _id: ObjectId("6402abb035d00102946178c1"),
+    author: 'Tommy Nathan',
+    genre: [ 'Fantasy', 'romance' ],
+    rating: 5
+  },
+  {
+    _id: ObjectId("6402be06f96da36e10649a1e"),
+    author: 'Kenneth Hagin',
+    rating: 10,
+    genre: [ 'Gospel', 'Faith' ]
+  },
+  {
+    _id: ObjectId("6402c606f96da36e10649a1f"),
+    author: 'Chris Onayinka',
+    rating: 10,
+    genre: [ 'Gospel', 'Faith' ]
+  },
+  {
+    _id: ObjectId("6402c606f96da36e10649a20"),
+    author: 'Chris Onayinka',
+    rating: 10,
+    genre: [ 'Gospel', 'Faith' ]
+  }
+]
+bookstore> //count Method
+
+bookstore> db.books.find().count()
+7
+bookstore> db.books.find({rating: 10}).count()
+3
+bookstore>
+(To exit, press Ctrl+C again or Ctrl+D or type .exit)
+bookstore>
