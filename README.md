@@ -1,2 +1,2 @@
-# Nathaniel-GitHub
-All link here are shared for review and correction to enable me get better
+# This is me documenting every Session and Lesson learnt in Mr JavaScript Video Class
+# Omo Source Control is Vital
