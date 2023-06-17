@@ -1,1 +1,0 @@
-const people = ['Bola', 'Funmi', 'Seun', 'Mope', 'Nihin']
