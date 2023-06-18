@@ -1,7 +1,11 @@
-var x = "25";
 var x = "100";
-x = "40";
+// var x = "100";
+function fun(params) {
+    document.write(x)
+}
+var x = "25";
 document.write(x)
+
 // Declare a variable a number of times
 
 let y = "50";
