@@ -11,3 +11,5 @@ console.log(recursiveFibonacci(2))
 console.log(recursiveFibonacci(4))
 console.log(recursiveFibonacci(8))
 console.log(recursiveFibonacci(16))
+
+// recursive value is o(2^n) - Line 7 is recursive function hence O(2^n).
