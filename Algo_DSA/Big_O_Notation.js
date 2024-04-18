@@ -69,3 +69,35 @@ function isPrime(n) {
 }
 
 console.log(isPrime(100))
+
+// Optimized Primality Test.
+
+function isPrime(n) {
+    for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) {
+            return false
+        }
+    }
+    return true
+}
+
+console.log(isPrime(73))
+
+// Big O Notation. Power of Two 4th Maths Algorithm.
+
+function powerOfTwo(n) {
+    if (n < 1) {
+        return false
+    }
+    let i = 1
+    while (i < n) {
+        i *= 2
+    }
+    return i === n
+}
+
+console.log(powerOfTwo(10))
+console.log(powerOfTwo(16))
+console.log(powerOfTwo(30))
+console.log(powerOfTwo(64))
+console.log(powerOfTwo(100))
