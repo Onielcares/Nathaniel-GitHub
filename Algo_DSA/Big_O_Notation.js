@@ -101,3 +101,17 @@ console.log(powerOfTwo(16))
 console.log(powerOfTwo(30))
 console.log(powerOfTwo(64))
 console.log(powerOfTwo(100))
+
+// Big O Notation. Sample of using Bitwise Operator. for 4th Maths Algorithm.
+
+function isPowerofTwoBitwise(n) {
+    return (n & (n - 1)) === 0
+}
+
+console.log(powerOfTwo(10))
+console.log(powerOfTwo(16))
+console.log(powerOfTwo(30))
+console.log(powerOfTwo(64))
+console.log(powerOfTwo(128))
+
+//Big 0 = 0(1) - Constant Time Complexity. Line 108 is while loop hence O(1).
