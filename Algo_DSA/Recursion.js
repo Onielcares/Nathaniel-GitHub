@@ -13,3 +13,12 @@ console.log(recursiveFibonacci(8))
 console.log(recursiveFibonacci(16))
 
 // recursive value is o(2^n) - Line 7 is recursive function hence O(2^n).
+
+// recursive Factorial of a number.
+
+function recursiveFactorial(n) {
+    if (n === 1) {
+        return 1
+    }
+    return n * recursiveFactorial(n-1)
+}
