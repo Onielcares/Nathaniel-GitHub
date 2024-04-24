@@ -22,3 +22,5 @@ function recursiveFactorial(n) {
     }
     return n * recursiveFactorial(n-1)
 }
+
+console.log(recursiveFactorial(120))
