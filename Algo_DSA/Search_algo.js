@@ -42,3 +42,5 @@ console.log(binarySearch([1,2,3,4,5,6,7,8,9,10], 5))
 console.log(binarySearch([1,2,3,4,5,6,7,8,9,10], 10))
 console.log(binarySearch([1,2,3,4,5,6,7,8,9,10], 15))
 
+// complexity is O(log n) - Line 30 is a loop hence O(log n)
+// Check this out Again Code Evolution 18
