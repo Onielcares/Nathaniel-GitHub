@@ -17,7 +17,7 @@ const circ = (diameter: number) => {
 console.log(circ(20));
 
 function respondToIfeoma(question) {   
-  if (question.includes("are you foolish")) {   
+  if (question.includes("Are you foolish")) {   
       return "I should ask you";     } 
 else {       
   return "I'm not sure how to respond to that.";     } 
