@@ -1,11 +1,12 @@
-var character = 'Oniel';
+"use strict";
+const character = 'Oniel';
 console.log(character);
-var inputs = document.querySelectorAll('input');
+const inputs = document.querySelectorAll('input');
 console.log(inputs);
-inputs.forEach(function (input) {
+inputs.forEach(input => {
     console.log(input);
 });
-var circ = function (diameter) {
+const circ = (diameter) => {
     return diameter * Math.PI;
 };
 console.log(circ(20));
@@ -18,3 +19,12 @@ function respondToIfeoma(question) {
     }
 }
 console.log(respondToIfeoma("Are you foolish?"));
+let nickName = 'Oniel';
+let nickNumber = 10;
+console.log(nickName);
+console.log(nickNumber);
+// Function Signature
+function greet(name) {
+    console.log(`Hello, ${name}!`);
+}
+greet('Oniel');
