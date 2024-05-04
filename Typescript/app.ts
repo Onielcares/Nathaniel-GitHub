@@ -16,7 +16,7 @@ const circ = (diameter: number) => {
 
 console.log(circ(20));
 
-function respondToIfeoma(question) {   
+function respondToIfeoma(question: string){   
   if (question.includes("Are you foolish")) {   
       return "I should ask you";     } 
 else {       
@@ -24,3 +24,20 @@ else {
 }  
 
 console.log(respondToIfeoma("Are you foolish?"));
+
+// types and functions and Signature and Arrays and Objects
+
+type Oniel = string | number;
+
+let nickName: Oniel = 'Oniel';
+let nickNumber: Oniel = 10;
+
+console.log(nickName);
+console.log(nickNumber);
+
+// Function Signature
+function greet(name: string) {
+  console.log(`Hello, ${name}!`);
+}
+
+greet('Oniel');

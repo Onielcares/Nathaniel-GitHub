@@ -1,4 +1,5 @@
-var number1 = 5;
-var number2 = 10;
-var result = number1 + number2;
+"use strict";
+let number1 = 5;
+let number2 = 10;
+let result = number1 + number2;
 console.log(result);
