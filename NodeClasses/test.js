@@ -15,7 +15,7 @@ console.log("Generated OTP:", generateOTP());
 function generateOTP(length = 6) {
     const chars = '0123456789';
     let otp = '';
-    for (let i = 0; i < length; i++) {
+    for (let i = 0; i < length; i += 1) {
       const randomIndex = Math.floor(Math.random() * chars.length);
       otp += chars[randomIndex];
     }
