@@ -8,3 +8,12 @@ function seeUser(user) {
 };
 
 console.log(seeUser(User));
+
+const seeUser1 = (user) => {
+    console.log (
+        'I am ' + user.name + 
+        ', I am ' + user.age + 'years Old. I do have Hobbies '+ user.hobbies
+    );
+};
+
+seeUser1(User);
