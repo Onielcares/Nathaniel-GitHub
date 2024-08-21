@@ -19,3 +19,12 @@ const wardrobe = {
 }
 
 console.log(JSON.stringify(wardrobe))
+
+const locker = {
+    door: 3,
+    color: 'brown',
+    material: 'wood',
+    size: 'big'
+}
+
+console.log(JSON.stringify(wardrobe))
