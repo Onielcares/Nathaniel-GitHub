@@ -10,3 +10,12 @@ console.log(numbers.length);
 for (let number of numbers) {
     console.log(number);
 }
+
+const wardrobe = {
+    door: 3,
+    color: 'brown',
+    material: 'wood',
+    size: 'big'
+}
+
+console.log(JSON.stringify(wardrobe))
