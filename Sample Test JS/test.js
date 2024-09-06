@@ -32,7 +32,7 @@ for (var i = 100; i > 0; i-= 2) {
 
 console.log(ourarray);
 
-var arr = [ 9, 10, 11, 12];
+var arr = [ 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 ];
 var total = 0;
 
 for (var i = 0; i < arr.length; i++) {
