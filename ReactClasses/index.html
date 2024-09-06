@@ -32,7 +32,7 @@
 
       // JSX element, header
       const header = (
-        <header>
+        <header style={headerStyles}>
           <h1>Welcome to React</h1>
           <h2>Getting Started React</h2>
           <h3>JavaScript Library</h3>
@@ -41,9 +41,14 @@
         </header>
       )
 
+        // JSX element, main
+      const mainStyles = {
+        backgroundColor: '#F3F0F5',
+      }
+
       // JSX element, main
       const main = (
-        <main>
+        <main style={mainStyles}>
           <p>Prerequisite to get started react.js:</p>
           <ul>
             <li>HTML</li>
@@ -53,16 +58,20 @@
         </main>
       )
 
+      const footerStyles = {
+        backgroundColor: '#61DBFB',
+      }
+
       // JSX element, footer
       const footer = (
-        <footer>
+        <footer style={footerStyles}>
           <p>Copyright 2024</p>
         </footer>
       )
 
       // JSX element, app, a container or a parent
       const app = (
-        <div>
+        <div className='app'>
           {header}
           {main}
           {footer}
