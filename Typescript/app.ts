@@ -1,66 +1,95 @@
-const character = 'Oniel';
+// const character = 'Oniel';
 
-console.log(character);
+// console.log(character);
 
-const inputs = document.querySelectorAll('input');
+// const inputs = document.querySelectorAll('input');
 
-console.log(inputs);
+// console.log(inputs);
 
-inputs.forEach(input => {
-  console.log(input);
-});
+// inputs.forEach(input => {
+//   console.log(input);
+// });
 
-const circ = (diameter: number) => {
-  return diameter * Math.PI;
+// const circ = (diameter: number) => {
+//   return diameter * Math.PI;
+// }
+
+// console.log(circ(20));
+
+// function respondToIfeoma(question: string){   
+//   if (question.includes("Are you foolish")) {   
+//       return "I should ask you";     } 
+// else {       
+//   return "I'm not sure how to respond to that.";     } 
+// }  
+
+// console.log(respondToIfeoma("Are you foolish?"));
+
+// // types and functions and Signature and Arrays and Objects
+
+// type Oniel = string | number;
+
+// let nickName: Oniel = 'Oniel';
+// let nickNumber: Oniel = 10;
+
+// console.log(nickName);
+// console.log(nickNumber);
+
+// // Function Signature
+// function greet(name: string) {
+//   console.log(`Hello, ${name}!`);
+// }
+
+// greet('Oniel');
+
+// const anchor = document.querySelector('a');
+
+// if (anchor) {
+//   console.log(anchor.href);
+// }
+
+// const form = document.querySelector('form')!;
+
+// console.log(form);
+
+// const form2 = document.querySelector('.new-item-form') as HTMLFormElement;
+
+// const type = document.querySelector('#type') as HTMLSelectElement;
+// const tofrom = document.querySelector('#tofrom') as HTMLInputElement;
+// const details = document.querySelector('#details') as HTMLInputElement;
+// const amount = document.querySelector('#amount') as HTMLInputElement;
+
+// form2.addEventListener('submit', (e: Event) => {
+//   e.preventDefault();
+
+//   console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
+// });
+
+// Interfaces
+
+interface IsPerson {
+  name: string;
+  age: number;
+  speak(a: string): void;
+  spend(a: number): number;
 }
 
-console.log(circ(20));
+const me: IsPerson = {
+  name: 'Oniel',
+  age: 30,
+  speak(text: string): void {
+    console.log(text);
+  },
+  spend(amount: number): number {
+    console.log('I spent', amount);
+    return amount;
+  }
+};
 
-function respondToIfeoma(question: string){   
-  if (question.includes("Are you foolish")) {   
-      return "I should ask you";     } 
-else {       
-  return "I'm not sure how to respond to that.";     } 
-}  
+console.log(me);
 
-console.log(respondToIfeoma("Are you foolish?"));
+const greetPerson = (person: IsPerson) => {
+  console.log('Hello', person.name);
+};
 
-// types and functions and Signature and Arrays and Objects
-
-type Oniel = string | number;
-
-let nickName: Oniel = 'Oniel';
-let nickNumber: Oniel = 10;
-
-console.log(nickName);
-console.log(nickNumber);
-
-// Function Signature
-function greet(name: string) {
-  console.log(`Hello, ${name}!`);
-}
-
-greet('Oniel');
-
-const anchor = document.querySelector('a');
-
-if (anchor) {
-  console.log(anchor.href);
-}
-
-const form = document.querySelector('form')!;
-
-console.log(form);
-
-const form2 = document.querySelector('.new-item-form') as HTMLFormElement;
-
-const type = document.querySelector('#type') as HTMLSelectElement;
-const tofrom = document.querySelector('#tofrom') as HTMLInputElement;
-const details = document.querySelector('#details') as HTMLInputElement;
-const amount = document.querySelector('#amount') as HTMLInputElement;
-
-form2.addEventListener('submit', (e: Event) => {
-  e.preventDefault();
-
-  console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
-});
+greetPerson(me);
